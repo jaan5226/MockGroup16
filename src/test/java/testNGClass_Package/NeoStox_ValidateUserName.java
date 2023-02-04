@@ -39,13 +39,15 @@ public class NeoStox_ValidateUserName extends NeoStox_BaseClass
   {
 	signIn.clickOnSignInButton(driver);
 	CommonMethod_Class.wait(driver, 1000);
-	logIn.enterMobileNumber(driver, CommonMethod_Class.readDataFromExcel(0, 0));
+//	logIn.enterMobileNumber(driver, CommonMethod_Class.readDataFromExcel(0, 0));
 //	logIn.enterMobileNumber(driver, CommonMethod_Class.readDataFromPropertyFile("mobNo"));
+	logIn.enterMobileNumber(driver, CommonMethod_Class.readDataFromPropertyFile("C:\\Users\\Jaber Khan\\eclipse-workspace\\MyMaven_Project\\src\\main\\resources\\CommonData.properties", "mobNo"));
 	CommonMethod_Class.wait(driver, 1000);
 	logIn.clickOnSignInButton(driver);
 	CommonMethod_Class.wait(driver, 1000);
-	pass.enterPassword(driver, CommonMethod_Class.readDataFromExcel(0, 1));
+//	pass.enterPassword(driver, CommonMethod_Class.readDataFromExcel(0, 1));
 //	pass.enterPassword(driver, CommonMethod_Class.readDataFromPropertyFile("pass"));
+	pass.enterPassword(driver, CommonMethod_Class.readDataFromPropertyFile("C:\\Users\\Jaber Khan\\eclipse-workspace\\MyMaven_Project\\src\\main\\resources\\CommonData.properties", "pass"));
 	CommonMethod_Class.wait(driver, 1000);
 	pass.clickOnSubmitButton(driver);
 	Thread.sleep(5000);
@@ -56,7 +58,8 @@ public class NeoStox_ValidateUserName extends NeoStox_BaseClass
   public void validateUserName() throws EncryptedDocumentException, IOException 
   {
 //	Assert.assertEquals(home.getUserName(driver), CommonMethod_Class.readDataFromExcel(0, 2));
-	Assert.assertEquals(home.getUserName(driver), CommonMethod_Class.readDataFromPropertyFile("userName"));
+//	Assert.assertEquals(home.getUserName(driver), CommonMethod_Class.readDataFromPropertyFile("userName"));
+	Assert.assertEquals(home.getUserName(driver), CommonMethod_Class.readDataFromPropertyFile("C:\\Users\\Jaber Khan\\eclipse-workspace\\MyMaven_Project\\src\\test\\resources\\TestData.properties", "userName"));
 	Reporter.log("TC is passed, Actual and expected user name is matched...", true);  
   }
   

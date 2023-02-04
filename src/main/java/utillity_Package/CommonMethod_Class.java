@@ -64,13 +64,14 @@ public class CommonMethod_Class
 	}
 	
 	//5. Common method use for data read from properties file
-	public static String readDataFromPropertyFile(String key) throws IOException 
+	public static String readDataFromPropertyFile(String filePath, String key) throws IOException 
 	{
 		//create object of properties class
 		Properties prop=new Properties();
 		
 		//create obj of FileInputStream and pass properties file path
-		FileInputStream file=new FileInputStream("C:\\Users\\Jaber Khan\\eclipse-workspace\\MyMaven_Project\\src\\main\\resources\\CommonData.properties");
+//		FileInputStream file=new FileInputStream("C:\\Users\\Jaber Khan\\eclipse-workspace\\MyMaven_Project\\src\\main\\resources\\CommonData.properties");
+		FileInputStream file=new FileInputStream(filePath);
 		
 		//load file object in properties
 		prop.load(file);

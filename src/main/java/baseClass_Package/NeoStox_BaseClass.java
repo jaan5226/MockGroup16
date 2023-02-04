@@ -16,7 +16,7 @@ public class NeoStox_BaseClass
 		driver=new ChromeDriver();
 		driver.manage().window().maximize();
 //		driver.get("https://neostox.com/");
-		driver.get(CommonMethod_Class.readDataFromPropertyFile("url"));
+		driver.get(CommonMethod_Class.readDataFromPropertyFile("C:\\Users\\Jaber Khan\\eclipse-workspace\\MyMaven_Project\\src\\main\\resources\\CommonData.properties", "url"));
 		CommonMethod_Class.wait(driver, 1000);
 		Reporter.log("Launch browser and open NeoStox...", true);
 	}

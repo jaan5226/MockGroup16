@@ -12,6 +12,7 @@ import utillity_Package.CommonMethod_Class;
 public class NeoStox_HomePage 
 {
 	@FindBy(xpath = "(//a[text()='OK'])[2]") private WebElement okButton;
+	@FindBy(xpath = "(//a[text()='Close'])[5]") private WebElement closeButton;
 	@FindBy(xpath = "(//a[@id='navbarDropdown']//span)[3]") private WebElement userName;
 	@FindBy(xpath = "//ul[contains(@class,'dropdown-menu dropdown')]//input") private WebElement darkTheme;	
 	@FindBy(xpath = "//span[@id='lbl_curbalancetop']") private WebElement availablefunds;
@@ -23,6 +24,7 @@ public class NeoStox_HomePage
 		PageFactory.initElements(driver, this);
 	}
 	
+	//use for combo test Ng class where we declared validate userName as well accBalance
 	public void handlePopUp(WebDriver driver)
 	{
 		if(okButton.isDisplayed())
@@ -37,7 +39,7 @@ public class NeoStox_HomePage
 		else
 		{
 			CommonMethod_Class.wait(driver, 1000);
-			Reporter.log("Pop-Up not display so just wait for few ms...", true);
+			Reporter.log("Pop-Up not display so just wait for few ms...", false);
 		}
 	}
 	
