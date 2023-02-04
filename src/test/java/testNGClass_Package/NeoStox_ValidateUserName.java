@@ -39,13 +39,13 @@ public class NeoStox_ValidateUserName extends NeoStox_BaseClass
   {
 	signIn.clickOnSignInButton(driver);
 	CommonMethod_Class.wait(driver, 1000);
-//	logIn.enterMobileNumber(driver, CommonMethod_Class.readDataFromExcel(0, 0));
-	logIn.enterMobileNumber(driver, CommonMethod_Class.readDataFromPropertyFile("mobNo"));
+	logIn.enterMobileNumber(driver, CommonMethod_Class.readDataFromExcel(0, 0));
+//	logIn.enterMobileNumber(driver, CommonMethod_Class.readDataFromPropertyFile("mobNo"));
 	CommonMethod_Class.wait(driver, 1000);
 	logIn.clickOnSignInButton(driver);
 	CommonMethod_Class.wait(driver, 1000);
-//	pass.enterPassword(driver, CommonMethod_Class.readDataFromExcel(0, 1));
-	pass.enterPassword(driver, CommonMethod_Class.readDataFromPropertyFile("pass"));
+	pass.enterPassword(driver, CommonMethod_Class.readDataFromExcel(0, 1));
+//	pass.enterPassword(driver, CommonMethod_Class.readDataFromPropertyFile("pass"));
 	CommonMethod_Class.wait(driver, 1000);
 	pass.clickOnSubmitButton(driver);
 	Thread.sleep(5000);
